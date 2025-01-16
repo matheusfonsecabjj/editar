@@ -51,8 +51,8 @@
         <label for="peso">Peso</label>
         <input type="text" id="peso" name="peso" required><br>
 
-        <label for="placa">Placa</label>
-        <input type="text" id="placa" name="placa" required><br>
+        <label for="placas">Placas</label> <!-- Alterado de "placa" para "placas" -->
+        <input type="text" id="placas" name="placas" required><br> <!-- Alterado para "placas" -->
 
         <label for="sku">SKU</label>
         <input type="text" id="sku" name="sku" required disabled><br>
@@ -74,7 +74,7 @@
                 document.getElementById('cor').value = produto.cor;
                 document.getElementById('espessura').value = produto.espessura;
                 document.getElementById('peso').value = produto.peso;
-                document.getElementById('placa').value = produto.placa || ''; // Adicionando o campo "Placa"
+                document.getElementById('placas').value = produto.placas || ''; // Alterado para 'placas'
                 document.getElementById('sku').value = produto.sku;
             } else {
                 alert('Produto não encontrado.');
@@ -96,7 +96,7 @@
                     cor: document.getElementById('cor').value,
                     espessura: document.getElementById('espessura').value,
                     peso: document.getElementById('peso').value,
-                    placa: document.getElementById('placa').value, // Salvando o novo campo "Placa"
+                    placas: document.getElementById('placas').value, // Alterado para 'placas'
                     sku: sku
                 };
                 localStorage.setItem('produtos', JSON.stringify(produtos));
